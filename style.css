@@ -1,0 +1,70 @@
+/* ... (all your existing styles from the previous step) ... */
+
+/* Weierstrass Plot Section */
+#weierstrass-plot .content-box {
+    text-align: center; /* Center the canvas and caption */
+}
+
+#weierstrassCanvas {
+    border: 1px solid #d4c8bc; /* Softer border color */
+    background-color: #fdfdfb; /* Slightly off-white background for the canvas */
+    margin-top: 15px;
+    margin-bottom: 10px;
+    max-width: 100%; /* Ensure canvas is responsive */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.plot-caption {
+    font-size: 0.9em;
+    font-style: italic;
+    color: #7f7060;
+    margin-top: 10px;
+}
+
+/* Video Homage Section */
+#video-homage .content-box {
+    text-align: center; /* Center section content */
+}
+
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid for videos */
+    gap: 25px; /* Space between videos */
+    margin-top: 20px;
+}
+
+.video-item {
+    background-color: #f9f7f3;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #e9e5df;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+}
+
+.video-item iframe {
+    display: block; /* Remove extra space below iframe */
+    margin: 0 auto 10px auto; /* Center iframe and add margin below */
+    max-width: 100%;
+    border-radius: 6px;
+}
+
+.video-item p { /* Caption for video */
+    font-size: 0.9em;
+    color: #555;
+    margin-top: 5px;
+    font-style: italic;
+}
+
+
+/* Ensure responsive canvas and videos inside the container */
+@media (max-width: 768px) {
+    #weierstrassCanvas {
+        width: 100% !important; /* Override fixed width for smaller screens */
+        height: auto !important; /* Adjust height proportionally */
+    }
+    .video-grid {
+        grid-template-columns: 1fr; /* Stack videos on smaller screens */
+    }
+}
+
+/* ... (your existing @media queries for responsiveness) ... */
